@@ -3,11 +3,11 @@ port = process.env.PORT || 4205;
  
 if (port === 4205) {
     var connection = mysql.createConnection({
-        host: 'sql9.freemysqlhosting.net',
+        host: 'sql2.freesqldatabase.com',
         port: 3306,
-        user: 'sql9248685',
-        password: 'Q1cGk1ULKJ',
-        database: 'sql9248685',
+        user: 'sql2248746',
+        password: 'bL9!yL3!',
+        database: 'sql2248746',
         insecureAuth: true
     });
 } else {console.log("No hay conexión");}
