@@ -12,6 +12,6 @@ if (port === 4205) {
     });
 } else {console.log("No hay conexión");}
  
-connection.connect();
+//connection.connect();
  
 module.exports = connection;
