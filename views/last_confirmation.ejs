@@ -1,0 +1,14 @@
+<%- include layouts/header.ejs %>  
+<%= message  %>
+   <form action="https://sandbox.paypal.com/cgi-bin/webscr" method="post">
+                
+                 <input type="hidden" name="cmd" value="_xclick">
+                    <input type="hidden" name="business" value="ricardomedin@outlook.com">
+                    <input type="hidden" name="item_name" value="TotalAmount"> 
+                    <input type="hidden" name="id" value="vendor_id"> 
+                    <input type="hidden" name="amount" value="<%= total  %>">    
+                    <input type="hidden" name="return" value="http://localhost:3000/"> 
+                    <%= total  %>
+                    <input type="image" name="submit" class="btn btn-success btn-block" value="Confirmación">
+    </form>
+<%- include layouts/footer.ejs %> 

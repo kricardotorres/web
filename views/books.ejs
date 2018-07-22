@@ -1,0 +1,19 @@
+<% include  layouts/header.ejs %>
+	<%= message  %>
+	 
+	<section>  
+		<h1><%= title %></h1>
+		<p>Welcome to <%= title %></p>
+	</section>
+	 <form action="/books" method="post" encType="multipart/form-data">	
+		 <input id="email" name="titulo" type="text" placeholder="titulo" /><br>
+		 <input id="text" name="descripcion" type="text" placeholder="descripción" /><br>
+		 <input id="text" name="precio" type="text" placeholder="precio" /><br>
+		  <input id="text" name="userFilename" type="text"  placeholder="Nombre de archivo" />
+		  <p>Opcional*</p><br>
+		  <input type="file" name="sampleFile" /><br>
+		<input id="user-submit" type="submit" value="Subir" />
+ 	</form>
+  
+<% include  layouts/footer.ejs %>
+

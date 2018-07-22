@@ -1,0 +1,33 @@
+<%- include layouts/header.ejs %>  
+ 
+Productos - Libros
+<div class="container">
+<div class="row"> 
+ 
+              <% for(var i=0; i<Libros.length; i++) { %>
+               
+                
+                     <div class="col-md-4">
+                        <form action="/add_cart" method="post" encType="multipart/form-data">
+                <h3><%= Libros[i].title %></h3>
+                <img width="100%" src="<%= Libros[i].imagen %>" alt="">
+                <p><%= Libros[i].descripcion %></p>
+                <div>Precio $<%= Libros[i].precio %></div> 
+                    <input type="hidden" name="id" value="<%= Libros[i].idLibros %>"> 
+                    <input type="image" name="submit" class="btn btn-success btn-block" value="Agregar al carrito">
+                     </form>
+                </div> 
+                   
+                       
+  
+               
+
+
+                <% } %>
+        
+      
+                 
+ 
+</div>
+</div>
+       <%- include layouts/footer.ejs %> 

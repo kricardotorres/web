@@ -1,0 +1,41 @@
+<%- include layouts/header.ejs %>  
+ 
+Productos - Libros
+<div class="container">
+<div class="row"> 
+<%  var total = 0 %>
+                <% for(var i=0; i<Libros.length; i++) { %>
+               
+                
+                     <div class="col-md-4">
+                              <h3><%= Libros[i].title %></h3>
+                <img width="100%" src="<%= Libros[i].imagen %>" alt="">
+                <p><%= Libros[i].descripcion %></p>
+                <div>Precio $<%= Libros[i].precio %>
+                    <%   total = parseInt(Libros[i].precio)+total %>
+                </div>
+                   <form action="/delete_from_array" method="post">
+                    <input type="hidden" name="id" value="<%= i %>">
+                     <input type="image" name="submit" class="btn btn-success btn-block" value="delete"> 
+                   </form>
+                </div> 
+                   
+                       
+  
+               
+
+
+                <% } %> 
+      <form action="/last_confirmation" method="post">
+                
+ 
+                    <input type="hidden" name="amount" value="<%= total  %>">    
+                   
+                    <%= total  %>
+                    <input type="image" name="submit" class="btn btn-success btn-block" value="Pagar con paypal">
+    </form>
+                 
+ 
+</div>
+</div>
+       <%- include layouts/footer.ejs %> 
