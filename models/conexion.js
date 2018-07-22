@@ -3,15 +3,15 @@ port = process.env.PORT || 4205;
  
 if (port === 4205) {
     var connection = mysql.createConnection({
-        host: 'localhost',
+        host: 'sql9.freemysqlhosting.net',
         port: 3306,
-        user: 'root',
-        password: '1234',
+        user: 'sql9248685',
+        password: 'Q1cGk1ULKJ',
         database: 'erpprueba',
         insecureAuth: true
     });
 } else {console.log("No hay conexión");}
  
-//connection.connect();
+connection.connect();
  
 module.exports = connection;
