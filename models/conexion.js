@@ -7,7 +7,7 @@ if (port === 4205) {
         port: 3306,
         user: 'sql9248685',
         password: 'Q1cGk1ULKJ',
-        database: 'erpprueba',
+        database: 'sql9248685',
         insecureAuth: true
     });
 } else {console.log("No hay conexión");}
